@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Part A</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style1.css') }}">
+</head>
+<body>
+    <div class="container">
+        <a href="/"><button >Go back</button></a>
+        <h1>Problem Statement: The Doomed Dice Challenge</h1>
+        <div class="image-container">
+            <img src="../static/question1.png" alt="dice">
+        </div>
+        
+      
+        <h2>1. How many total combinations are possible?</h2>
+        <p>Total combinations possible: {{ total_combinations }}</p>
+
+        <h2>2. Calculate and display the distribution of all possible combinations</h2>
+        <p>Show the math along with the code! Hint: A 6 x 6 Matrix.</p>
+        <div class="matrix-box">
+            <table>
+                <tr>
+                    {% for header in headers %}
+                        <th>{{ header }}</th>
+                    {% endfor %}
+                </tr>
+                {% for row in combinations_matrix %}
+                    <tr>
+                        {% for col in row %}
+                            <td>{{ col }}</td>
+                        {% endfor %}
+                    </tr>
+                {% endfor %}
+            </table>
+        </div>
+
+               
+<h2>3. Calculate the Probability of all Possible Sums</h2>
+
+<p>Example: P(Sum = 2) = 1/X as there is only one combination possible to obtain Sum = 2. Die A = Die B = 1.</p>
+<div class="probability">
+    <table>
+        <tr>
+            <th>Sum</th>
+            <th>Frequency</th>
+           
+            <th>Probability</th>
+        </tr>
+        {% for sum, freq in frequency.items() %}
+            <tr>
+                <td>{{ sum }}</td>
+                <td>{{ freq }}</td>
+                <td>{{ probability[sum] }}</td>
+            </tr>
+        {% endfor %}
+    </table>
+</div>
+
+
+      
+    </div>
+</body>
+</html>

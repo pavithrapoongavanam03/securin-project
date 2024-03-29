@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Part B</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style2.css') }}">
+</head>
+<body>
+    <div class="container">
+        <a href="/"><button>Go Back</button></a>
+        <div class="problem-statement">
+            <h1>Problem Statement : Transformed Dice
+            </h1>
+            <p>Now comes the real challenge. You were happily spending a lazy afternoon playing your board game with your dice when suddenly the mischievous Norse God Loki (You love Thor too much & Loki didn’t like that much) appeared. Loki dooms your dice for his fun removing all the “Spots” off the dice.</p>
+            <p>No problem! You have the tools to re-attach the “Spots” back on the Dice. However, Loki has doomed your dice with the following conditions:</p>
+            <ul>
+                <li>Die A cannot have more than 4 Spots on a face.</li>
+                <li>Die A may have multiple faces with the same number of spots.</li>
+                <li>Die B can have as many spots on a face as necessary i.e. even more than 6.</li>
+            </ul>
+            <p>But in order to play your game, the probability of obtaining the Sums must remain the same! So if you could only roll P(Sum = 2) = 1/X, the new dice must have the spots reattached such that those probabilities are not changed.</p>
+       
+        </div>
+        
+        <div class="image-container">
+            <img src="../static/question.png" alt="Dice Image">
+        </div>
+    
+   
+      
+        <div class="dice-container">
+            <div class="dice">
+                <h2>Transformed Dice A</h2>
+                <ul>
+                    {% for value in transformedA %}
+                        {% if value <= 4 %}
+                            <li>{{ value }}</li>
+                        {% else %}
+                            <li class="invalid">Invalid</li>
+                        {% endif %}
+                    {% endfor %}
+                </ul>
+            </div>
+            <div class="dice">
+                <h2>Transformed Dice B</h2>
+                <ul>
+                    {% for value in transformedB %}
+                        <li>{{ value }}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,107 @@
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+
+.problem-statement {
+    margin-bottom: 20px;}
+.problem-statement h1{
+    text-align: center;
+    color: #800080;
+
+}
+
+.problem-statement h2 {
+    font-size: 24px;
+    color: #800080; 
+}
+
+.problem-statement p {
+    margin-bottom: 10px;
+    line-height: 1.5;
+}
+
+.problem-statement ul {
+    margin-bottom: 10px;
+}
+
+.problem-statement li {
+    margin-bottom: 5px;
+}
+
+
+.image-container {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.image-container img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+button {
+    position: relative;
+    display: inline-block;
+    margin: 15px;
+    padding: 15px 30px;
+    text-align: center;
+    font-size: 18px;
+    letter-spacing: 1px;
+    text-decoration: none;
+    color: #725AC1;
+    background: transparent;
+    cursor: pointer;
+    transition: ease-out 0.5s;
+    border: 2px solid #725AC1;
+    border-radius: 10px;
+    box-shadow: inset 0 0 0 0 #725AC1;
+  }
+  
+  button:hover {
+    color: white;
+    box-shadow: inset 0 -100px 0 0 #725AC1;
+  }
+  
+  button:active {
+    transform: scale(0.9);
+  }
+
+
+.dice-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap; 
+}
+
+.dice {
+    flex: 0 0 calc(50% - 20px); 
+    margin-bottom: 20px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.dice h2 {
+    font-size: 20px;
+    color: #800080; 
+    margin-bottom: 10px;
+}
+
+.dice ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.dice li {
+    margin-bottom: 5px;
+}
+
+.invalid {
+    color: #FF0000;
+}
